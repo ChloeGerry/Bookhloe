@@ -68,6 +68,7 @@ export default function RootLayout({
         {children}
         <footer className="bottom-0">
           <svg
+            className="w-full lg:w-auto"
             width="611"
             height="238"
             viewBox="0 0 611 238"

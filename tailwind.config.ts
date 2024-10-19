@@ -18,9 +18,10 @@ const config: Config = {
       },
       borderRadius: {
         large: "70px",
+        small: "40px",
       },
       margin: {
-        "94px": "94px",
+        "88px": "88px",
       },
     },
   },

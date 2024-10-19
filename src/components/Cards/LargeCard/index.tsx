@@ -6,21 +6,23 @@ const LargeCard = ({ title, subtitles }: bookhloeInformationsType) => {
   const backgroundColor: string =
     title === LISTE_DE_LECTURE ? "bg-light-blue" : "bg-light-lavender";
 
+  // margin-bottom: 83px;
+
   return (
     <article
-      className={`flex flex-col justify-center gap-20 font-alex-brush rounded-large p-12 ${backgroundColor} text-center w-96 h-80`}
+      className={`flex flex-col justify-center font-alex-brush rounded-small p-4 w-full h-44 gap-6 ${backgroundColor} text-center lg:rounded-large lg:w-96 lg:h-80 lg:p-12 lg:gap-20`}
     >
       {title === LISTE_DE_LECTURE ? (
-        <h2 className="text-5xl">{title}</h2>
+        <h2 className="text-4xl lg:text-5xl">{title}</h2>
       ) : (
-        <Link href="/read-books" className="text-5xl">
+        <Link href="/read-books" className="text-4xl lg:text-5xl">
           {title}
         </Link>
       )}
       {subtitles && (
         <div className="flex flex-col justify-center gap-2">
           {subtitles.map(({ title, href }: subtitlesType) => (
-            <Link href={href} key={title} className="text-2xl font-yaldevi">
+            <Link href={href} key={title} className="text-base lg:text-2xl font-yaldevi">
               {title}
             </Link>
           ))}
