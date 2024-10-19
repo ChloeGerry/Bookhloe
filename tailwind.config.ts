@@ -8,9 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "alex-brush": ['"Alex Brush"', "cursive"],
+        yaldevi: ['"Yaldevi"', "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "light-blue": "#D6ECFF",
+        "light-lavender": "#D8D4FF",
+      },
+      borderRadius: {
+        large: "70px",
+      },
+      margin: {
+        "94px": "94px",
       },
     },
   },
