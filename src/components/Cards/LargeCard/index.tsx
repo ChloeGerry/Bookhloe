@@ -6,8 +6,6 @@ const LargeCard = ({ title, subtitles }: bookhloeInformationsType) => {
   const backgroundColor: string =
     title === LISTE_DE_LECTURE ? "bg-light-blue" : "bg-light-lavender";
 
-  // margin-bottom: 83px;
-
   return (
     <article
       className={`flex flex-col justify-center font-alex-brush rounded-small p-4 w-full h-44 gap-6 ${backgroundColor} text-center lg:rounded-large lg:w-96 lg:h-80 lg:p-12 lg:gap-20`}
