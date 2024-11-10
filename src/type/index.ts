@@ -8,3 +8,14 @@ export type subtitlesType = {
   title: string;
   href: string;
 };
+
+export type bookType = {
+  title: string;
+  author_firstname: string;
+  author_lastname: string;
+  id: string;
+  cover_picture_url: string;
+  bought: boolean;
+  read: boolean;
+  grade?: string;
+};
