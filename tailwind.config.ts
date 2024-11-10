@@ -14,14 +14,24 @@ const config: Config = {
       },
       colors: {
         "light-blue": "#D6ECFF",
+        blue: "#8AC9FF",
         "light-lavender": "#D8D4FF",
+        lavender: "#9388FF",
+        "light-pink": "#FFDFE5",
+        pink: "#FF93A7",
+        "light-green": "#D4FFDC",
       },
       borderRadius: {
         large: "70px",
-        small: "40px",
+        medium: "40px",
+        small: "30px",
+        extraSmall: "10%",
       },
       margin: {
-        "88px": "88px",
+        "88": "88px",
+      },
+      height: {
+        "100": "100px",
       },
     },
   },
