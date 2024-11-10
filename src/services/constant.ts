@@ -1,1 +1,1 @@
-export const LISTE_DE_LECTURE = "Liste de lecture";
+export const LISTES_DE_LECTURE = "Listes de lecture";
