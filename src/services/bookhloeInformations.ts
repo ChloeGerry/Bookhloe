@@ -2,7 +2,7 @@ import { bookhloeInformationsType } from "@/type";
 
 export const bookhloeInformations: bookhloeInformationsType[] = [
   {
-    title: "Liste de lecture",
+    title: "Listes de lecture",
     subtitles: [
       {
         title: "Whishlist",
