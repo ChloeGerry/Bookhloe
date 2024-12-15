@@ -1,7 +1,7 @@
 import LargeCard from "@/components/Cards/LargeCard";
 import { bookhloeInformations } from "@/services/bookhloeInformations";
 
-const Bookhloe = () => {
+const Bookhloe = async () => {
   return (
     <>
       <h1 className="relative z-10 text-6xl text-center pt-14 font-alex-brush lg:pt-16 lg:text-7xl">
