@@ -1,16 +1,18 @@
 import Title from "@/components/Title";
 import CardsContainer from "@/components/CardsContainer";
-import { useBooks } from "@/hooks/useBooks";
-import { bookType } from "@/type";
+import { BooksProvider } from "@/app/context";
+import { getBooks } from "@/services/getBooks";
+import { CurrentPageTypeEnum } from "@/type";
 
 const Whishlist = async () => {
-  const books: bookType[] | null = await useBooks();
-  const wishlist = books?.filter((book) => book.bought === false);
+  const books = await getBooks();
 
   return (
     <>
       <Title title="Whishlist" />
-      <CardsContainer booksList={wishlist} />
+      <BooksProvider books={books}>
+        <CardsContainer pageType={CurrentPageTypeEnum.WHISHLIST} />
+      </BooksProvider>
     </>
   );
 };

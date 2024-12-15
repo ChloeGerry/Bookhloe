@@ -1,17 +1,18 @@
 import Title from "@/components/Title";
 import CardsContainer from "@/components/CardsContainer";
-import { useBooks } from "@/hooks/useBooks";
-import { bookType } from "@/type";
+import { BooksProvider } from "@/app/context";
+import { getBooks } from "@/services/getBooks";
+import { CurrentPageTypeEnum } from "@/type";
 
 const ReadList = async () => {
-  const books: bookType[] | null = await useBooks();
-
-  const readList = books?.filter((book) => book.bought === true && book.read === false);
+  const books = await getBooks();
 
   return (
     <>
       <Title title="Pile à lire" />
-      <CardsContainer booksList={readList} />
+      <BooksProvider books={books}>
+        <CardsContainer pageType={CurrentPageTypeEnum.READ_LIST} />
+      </BooksProvider>
     </>
   );
 };
