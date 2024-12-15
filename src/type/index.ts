@@ -19,3 +19,9 @@ export type bookType = {
   read: boolean;
   grade: string | null;
 };
+
+export enum CurrentPageTypeEnum {
+  READ_LIST = "readList",
+  READ_BOOKS = "readBooks",
+  WHISHLIST = "whishlist",
+}
