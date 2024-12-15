@@ -13,9 +13,9 @@ export type bookType = {
   title: string;
   author_firstname: string;
   author_lastname: string;
-  id: string;
+  id: number;
   cover_picture_url: string;
   bought: boolean;
   read: boolean;
-  grade?: string;
+  grade: string | null;
 };
