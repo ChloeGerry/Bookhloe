@@ -34,7 +34,7 @@ const SmallCard = ({
   }
 
   return (
-    <Link href={`/read-books/${id}`} className={`flex w-full gap-8 justify-around items-center`}>
+    <Link href={`/book/${id}`} className={`flex w-full gap-8 justify-around items-center`}>
       <article
         className={`flex w-full rounded-small border-2 ${cardColor} bg-[#FDF8F7] py-6 px-8 gap-8 justify-around items-center`}
       >
