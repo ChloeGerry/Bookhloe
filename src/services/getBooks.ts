@@ -1,8 +1,10 @@
+"use server";
+
 import { bookType } from "@/type";
 
 export const getBooks = async (): Promise<bookType[] | null> => {
   try {
-    const result = await fetch("http://localhost:3000/books");
+    const result = await fetch(`http://localhost:3000/books`);
     const books = await result.json();
 
     if (!books) {
