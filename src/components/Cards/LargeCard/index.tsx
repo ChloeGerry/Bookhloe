@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { bookhloeInformationsType, subtitlesType } from "@/type";
-import { LISTES_DE_LECTURE } from "@/services/constant";
+import { LISTES_DE_LECTURE } from "@/utils/constant";
 
 const LargeCard = ({ title, subtitles }: bookhloeInformationsType) => {
   const backgroundColor: string =
