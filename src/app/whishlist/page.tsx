@@ -1,6 +1,6 @@
+import { BooksProvider } from "@/app/context";
 import Title from "@/components/Title";
 import CardsContainer from "@/components/CardsContainer";
-import { BooksProvider } from "@/app/context";
 import { getBooks } from "@/services/getBooks";
 import { CurrentPageTypeEnum } from "@/type";
 
@@ -10,7 +10,7 @@ const Whishlist = async () => {
   return (
     <>
       <Title title="Whishlist" />
-      <BooksProvider books={books}>
+      <BooksProvider initialBooks={books}>
         <CardsContainer pageType={CurrentPageTypeEnum.WHISHLIST} />
       </BooksProvider>
     </>

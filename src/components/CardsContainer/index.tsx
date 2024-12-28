@@ -1,7 +1,8 @@
 "use client";
 
 import { useBooksContext } from "@/app/context";
-import SmallCard from "../Cards/SmallCard";
+import SmallCard from "@/components/Cards/SmallCard";
+import { useBooksUpdater } from "@/services/useBooksUpdater";
 import { CurrentPageTypeEnum } from "@/type";
 
 type CardContainerProps = {
@@ -9,7 +10,8 @@ type CardContainerProps = {
 };
 
 const CardsContainer = ({ pageType }: CardContainerProps) => {
-  const books = useBooksContext();
+  useBooksUpdater();
+  const { books } = useBooksContext();
 
   const updatedTypes = {
     [CurrentPageTypeEnum.READ_LIST]: books?.filter(
