@@ -1,18 +1,25 @@
 "use client";
 
+import { createContext, useContext, useState } from "react";
 import { bookType } from "@/type";
-import { createContext, useContext } from "react";
 
-export const BooksContext = createContext<bookType[] | null>(null);
+interface BooksContextType {
+  books: bookType[] | null;
+  setBooks: (books: bookType[] | null) => void;
+}
+
+const BooksContext = createContext<BooksContextType | null>(null);
 
 export function BooksProvider({
   children,
-  books,
+  initialBooks,
 }: {
   children: React.ReactNode;
-  books: bookType[] | null;
+  initialBooks: bookType[] | null;
 }) {
-  return <BooksContext.Provider value={books}>{children}</BooksContext.Provider>;
+  const [books, setBooks] = useState<bookType[] | null>(initialBooks);
+
+  return <BooksContext.Provider value={{ books, setBooks }}>{children}</BooksContext.Provider>;
 }
 
 export function useBooksContext() {
