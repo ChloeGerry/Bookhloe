@@ -18,6 +18,9 @@ export type bookType = {
   bought: boolean;
   read: boolean;
   grade: string | null;
+  synopsis: string;
+  total_pages: number;
+  read_pages: number;
 };
 
 export enum CurrentPageTypeEnum {
