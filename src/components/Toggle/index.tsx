@@ -13,7 +13,7 @@ const Toggle = ({ isTriggered, onClick }: ToogleProps) => {
         onClick={onClick}
         className={twMerge(
           "absolute w-6 h-6 rounded-full cursor-pointer ease-in-out duration-150",
-          isTriggered ? "mr-1 bg-neutral-400" : "ml-1 bg-white"
+          isTriggered ? "mr-1 bg-[#689d71]" : "ml-1 bg-white"
         )}
       />
     </div>
