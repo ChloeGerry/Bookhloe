@@ -14,7 +14,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <header>
+        <div>
           <div className="fixed top-0 right-0">
             <svg
               width="350"
@@ -64,9 +64,9 @@ export default function RootLayout({
               />
             </svg>
           </div>
-        </header>
+        </div>
         {children}
-        <footer className="fixed left-0 bottom-0">
+        <div className="fixed left-0 bottom-0">
           <svg
             className="w-full lg:w-auto"
             width="611"
@@ -80,7 +80,7 @@ export default function RootLayout({
               fill="#FFDFCC"
             />
           </svg>
-        </footer>
+        </div>
       </body>
     </html>
   );
